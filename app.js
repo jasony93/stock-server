@@ -32,7 +32,8 @@ app.get('/:id', (req, res) => {
     }
 
     // res.header("Access-Control-Allow-Origin", "*");
-    res.end(object)
+    res.setHeader('Content-Type', 'application/json');
+    res.end(JSON.stringify(object))
     // res.send(object)
 });
 
