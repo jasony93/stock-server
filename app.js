@@ -20,6 +20,7 @@ app.get('/:id', (req, res) => {
         }
     }
 
+    res.header("Access-Control-Allow-Origin", "*");
     res.json(object)
 });
 
